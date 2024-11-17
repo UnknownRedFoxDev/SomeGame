@@ -1,0 +1,138 @@
+cmake_minimum_required(VERSION 3.29)
+project(ExampleFile_SFML_ImGUI___Copie)
+
+set(CMAKE_CXX_STANDARD 14)
+
+include_directories(imgui)
+include_directories(libraries)
+include_directories(libraries/include)
+include_directories(libraries/include/SFML)
+include_directories(libraries/include/SFML/Audio)
+include_directories(libraries/include/SFML/Graphics)
+include_directories(libraries/include/SFML/Network)
+include_directories(libraries/include/SFML/System)
+include_directories(libraries/include/SFML/Window)
+
+add_executable(ExampleFile_SFML_ImGUI___Copie
+    imgui/imconfig-SFML.h
+    imgui/imconfig.h
+    imgui/imgui-SFML.cpp
+    imgui/imgui-SFML.h
+    imgui/imgui-SFML_export.h
+    imgui/imgui.cpp
+    imgui/imgui.h
+    imgui/imgui_draw.cpp
+    imgui/imgui_internal.h
+    imgui/imgui_tables.cpp
+    imgui/imgui_widgets.cpp
+    imgui/imstb_rectpack.h
+    imgui/imstb_textedit.h
+    imgui/imstb_truetype.h
+    libraries/include/SFML/Audio/AlResource.hpp
+    libraries/include/SFML/Audio/Export.hpp
+    libraries/include/SFML/Audio/InputSoundFile.hpp
+    libraries/include/SFML/Audio/Listener.hpp
+    libraries/include/SFML/Audio/Music.hpp
+    libraries/include/SFML/Audio/OutputSoundFile.hpp
+    libraries/include/SFML/Audio/Sound.hpp
+    libraries/include/SFML/Audio/SoundBuffer.hpp
+    libraries/include/SFML/Audio/SoundBufferRecorder.hpp
+    libraries/include/SFML/Audio/SoundFileFactory.hpp
+    libraries/include/SFML/Audio/SoundFileFactory.inl
+    libraries/include/SFML/Audio/SoundFileReader.hpp
+    libraries/include/SFML/Audio/SoundFileWriter.hpp
+    libraries/include/SFML/Audio/SoundRecorder.hpp
+    libraries/include/SFML/Audio/SoundSource.hpp
+    libraries/include/SFML/Audio/SoundStream.hpp
+    libraries/include/SFML/Graphics/BlendMode.hpp
+    libraries/include/SFML/Graphics/CircleShape.hpp
+    libraries/include/SFML/Graphics/Color.hpp
+    libraries/include/SFML/Graphics/ConvexShape.hpp
+    libraries/include/SFML/Graphics/Drawable.hpp
+    libraries/include/SFML/Graphics/Export.hpp
+    libraries/include/SFML/Graphics/Font.hpp
+    libraries/include/SFML/Graphics/Glsl.hpp
+    libraries/include/SFML/Graphics/Glsl.inl
+    libraries/include/SFML/Graphics/Glyph.hpp
+    libraries/include/SFML/Graphics/Image.hpp
+    libraries/include/SFML/Graphics/PrimitiveType.hpp
+    libraries/include/SFML/Graphics/Rect.hpp
+    libraries/include/SFML/Graphics/Rect.inl
+    libraries/include/SFML/Graphics/RectangleShape.hpp
+    libraries/include/SFML/Graphics/RenderStates.hpp
+    libraries/include/SFML/Graphics/RenderTarget.hpp
+    libraries/include/SFML/Graphics/RenderTexture.hpp
+    libraries/include/SFML/Graphics/RenderWindow.hpp
+    libraries/include/SFML/Graphics/Shader.hpp
+    libraries/include/SFML/Graphics/Shape.hpp
+    libraries/include/SFML/Graphics/Sprite.hpp
+    libraries/include/SFML/Graphics/Text.hpp
+    libraries/include/SFML/Graphics/Texture.hpp
+    libraries/include/SFML/Graphics/Transform.hpp
+    libraries/include/SFML/Graphics/Transformable.hpp
+    libraries/include/SFML/Graphics/Vertex.hpp
+    libraries/include/SFML/Graphics/VertexArray.hpp
+    libraries/include/SFML/Graphics/VertexBuffer.hpp
+    libraries/include/SFML/Graphics/View.hpp
+    libraries/include/SFML/Network/Export.hpp
+    libraries/include/SFML/Network/Ftp.hpp
+    libraries/include/SFML/Network/Http.hpp
+    libraries/include/SFML/Network/IpAddress.hpp
+    libraries/include/SFML/Network/Packet.hpp
+    libraries/include/SFML/Network/Socket.hpp
+    libraries/include/SFML/Network/SocketHandle.hpp
+    libraries/include/SFML/Network/SocketSelector.hpp
+    libraries/include/SFML/Network/TcpListener.hpp
+    libraries/include/SFML/Network/TcpSocket.hpp
+    libraries/include/SFML/Network/UdpSocket.hpp
+    libraries/include/SFML/System/Clock.hpp
+    libraries/include/SFML/System/Err.hpp
+    libraries/include/SFML/System/Export.hpp
+    libraries/include/SFML/System/FileInputStream.hpp
+    libraries/include/SFML/System/InputStream.hpp
+    libraries/include/SFML/System/Lock.hpp
+    libraries/include/SFML/System/MemoryInputStream.hpp
+    libraries/include/SFML/System/Mutex.hpp
+    libraries/include/SFML/System/NativeActivity.hpp
+    libraries/include/SFML/System/NonCopyable.hpp
+    libraries/include/SFML/System/Sleep.hpp
+    libraries/include/SFML/System/String.hpp
+    libraries/include/SFML/System/String.inl
+    libraries/include/SFML/System/Thread.hpp
+    libraries/include/SFML/System/Thread.inl
+    libraries/include/SFML/System/ThreadLocal.hpp
+    libraries/include/SFML/System/ThreadLocalPtr.hpp
+    libraries/include/SFML/System/ThreadLocalPtr.inl
+    libraries/include/SFML/System/Time.hpp
+    libraries/include/SFML/System/Utf.hpp
+    libraries/include/SFML/System/Utf.inl
+    libraries/include/SFML/System/Vector2.hpp
+    libraries/include/SFML/System/Vector2.inl
+    libraries/include/SFML/System/Vector3.hpp
+    libraries/include/SFML/System/Vector3.inl
+    libraries/include/SFML/Window/Clipboard.hpp
+    libraries/include/SFML/Window/Context.hpp
+    libraries/include/SFML/Window/ContextSettings.hpp
+    libraries/include/SFML/Window/Cursor.hpp
+    libraries/include/SFML/Window/Event.hpp
+    libraries/include/SFML/Window/Export.hpp
+    libraries/include/SFML/Window/GlResource.hpp
+    libraries/include/SFML/Window/Joystick.hpp
+    libraries/include/SFML/Window/Keyboard.hpp
+    libraries/include/SFML/Window/Mouse.hpp
+    libraries/include/SFML/Window/Sensor.hpp
+    libraries/include/SFML/Window/Touch.hpp
+    libraries/include/SFML/Window/VideoMode.hpp
+    libraries/include/SFML/Window/Window.hpp
+    libraries/include/SFML/Window/WindowHandle.hpp
+    libraries/include/SFML/Window/WindowStyle.hpp
+    libraries/include/SFML/Audio.hpp
+    libraries/include/SFML/Config.hpp
+    libraries/include/SFML/GpuPreference.hpp
+    libraries/include/SFML/Graphics.hpp
+    libraries/include/SFML/Main.hpp
+    libraries/include/SFML/Network.hpp
+    libraries/include/SFML/OpenGL.hpp
+    libraries/include/SFML/System.hpp
+    libraries/include/SFML/Window.hpp
+    main.cpp)
